@@ -28,7 +28,7 @@ end
   ScraperWiki.save_sqlite([:id], row, 'terms')
 end
 
-file = 'https://raw.githubusercontent.com/mysociety/parlparse/master/members/people.json'
+file = 'http://cdn.rawgit.com/mysociety/parlparse/98435d1e57607dd091ff8f52c72f9ccb86b53c4c/members/people.json'
 @json = json_load(file)
 
 # Eileen Bell as Speaker
