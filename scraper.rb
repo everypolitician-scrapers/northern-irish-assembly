@@ -8,8 +8,8 @@ require 'csv'
 require 'yajl/json_gem'
 
 require 'pry'
-require 'open-uri/cached'
-OpenURI::Cache.cache_path = '.cache'
+# require 'open-uri/cached'
+# OpenURI::Cache.cache_path = '.cache'
 
 term_data = <<'EOT'
 id,name,start_date,end_date
