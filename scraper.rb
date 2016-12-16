@@ -3,7 +3,6 @@
 
 require 'scraperwiki'
 require 'open-uri'
-require 'colorize'
 require 'csv'
 require 'yajl/json_gem'
 
