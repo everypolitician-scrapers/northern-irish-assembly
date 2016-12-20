@@ -23,9 +23,6 @@ def json_load(file)
 end
 
 @terms = CSV.parse(term_data, headers: true, header_converters: :symbol)
-@terms.each do |row|
-  ScraperWiki.save_sqlite([:id], row, 'terms')
-end
 
 file = 'http://cdn.rawgit.com/mysociety/parlparse/98435d1e57607dd091ff8f52c72f9ccb86b53c4c/members/people.json'
 @json = json_load(file)
@@ -83,7 +80,7 @@ post_ids = posts.map { |p| p[:id] }.to_set
     end_reason: m[:end_reason],
     term: m[:legislative_period_id] || term_id(m),
   }
-  # puts data
+  # puts data
   ScraperWiki.save_sqlite([:id, :term], data)
 end
 
